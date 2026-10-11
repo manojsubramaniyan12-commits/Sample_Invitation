@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7e4b5">
+<title>Vanitha Sengottaiyan Illam | House Warming Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Noto+Serif+Tamil:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#b78328;--gold2:#e4c574;--brown:#54280d;--cream:#fff3d2;--deep:#713813}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:var(--brown);background:#f7e4b5;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at top,#fff9e9 0%,#f6dfaa 70%,#e9c77d 100%)}
+#opening{position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at center,#fff0c8,#b77a27 100%);transition:opacity .9s,visibility .9s}
+#opening.closed{opacity:0;visibility:hidden}
+.open-card{position:relative;width:min(600px,100%);padding:48px 24px;text-align:center;background:rgba(255,248,225,.94);border:2px solid var(--gold);outline:1px solid #d8b55e;outline-offset:-10px;box-shadow:0 20px 70px #75420b40}
+.open-card:before,.open-card:after{content:"❧";position:absolute;color:var(--gold);font-size:42px;top:8px}.open-card:before{left:14px}.open-card:after{right:14px;transform:scaleX(-1)}
+.om{font-size:48px;color:#7d360e}.intro-small{font:italic 20px "Cormorant Garamond",serif;margin:12px 0}.script{font:clamp(55px,12vw,85px) "Great Vibes";color:#74310c;line-height:1.1}
+button,.map-button{cursor:pointer;border:0;text-decoration:none;display:inline-block;background:linear-gradient(135deg,#8a4a10,#c28d2e);color:#fff8e5;padding:13px 25px;border-radius:28px;letter-spacing:.5px;box-shadow:0 7px 18px #75420b30;transition:transform .25s,filter .25s}
+button:hover,.map-button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+main{width:min(960px,95%);margin:22px auto 35px}
+.card{position:relative;padding:12px;border:2px solid var(--gold);border-radius:9px;background:rgba(255,245,214,.76);box-shadow:0 18px 50px #74430d25}
+.inner{position:relative;text-align:center;padding:28px clamp(14px,4vw,38px) 26px;border:1px solid #d2a64b;overflow:hidden}
+.inner:before{content:"";position:absolute;inset:8px;border:1px solid #e0c477;pointer-events:none}
+.corner{position:absolute;font-size:38px;color:#ad7922;line-height:1}.tl{top:10px;left:12px}.tr{top:10px;right:12px;transform:scaleX(-1)}.bl{bottom:10px;left:12px;transform:scaleY(-1)}.br{bottom:10px;right:12px;transform:scale(-1)}
+.top-lamps{font-size:30px;letter-spacing:8px;margin:4px 0 8px}
+.blessing{font:italic clamp(17px,3vw,24px) "Cormorant Garamond",serif;line-height:1.4}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;margin:15px 0 3px;color:#8c5a17}
+.main-title{font:clamp(45px,9vw,84px) "Great Vibes";color:#66300c;line-height:1.12;text-shadow:1px 2px #e8ce84}
+.sub-title{font:22px "Cormorant Garamond",serif;letter-spacing:4px}
+.ornament{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:14px auto}.ornament:before,.ornament:after{content:"";width:min(135px,24vw);height:1px;background:var(--gold)}
+.message{font:clamp(18px,2.5vw,23px)/1.5 "Cormorant Garamond",serif;max-width:690px;margin:0 auto}.message strong{color:#77340e}
+.house-name{font:clamp(45px,8vw,70px) "Great Vibes";color:#6e310c;margin:4px 0 7px}
+.name-frame{display:inline-block;position:relative;margin:14px auto;padding:6px 24px;border:2px solid #bb872c;border-radius:15px;box-shadow:inset 0 0 0 3px #fff0c7}
+.name-frame:before,.name-frame:after{content:"❧";position:absolute;top:50%;transform:translateY(-50%);font-size:26px;color:#a66d1a}.name-frame:before{left:-20px}.name-frame:after{right:-20px;transform:translateY(-50%) scaleX(-1)}
+.home-photo{width:100%;max-height:440px;object-fit:cover;display:block;margin:15px auto 18px;border:5px solid #fff0ca;outline:1px solid #c79a40;box-shadow:0 8px 22px #75420b25}
+.details{display:grid;grid-template-columns:repeat(3,1fr);margin:18px auto 16px;border-top:1px solid #c99a3d;border-bottom:1px solid #c99a3d;padding:18px 0}
+.detail{padding:4px 12px}.detail+.detail{border-left:1px solid #c99a3d}.detail-icon{font-size:28px}.detail-label{font:italic 20px "Cormorant Garamond",serif}.detail-value{font:600 clamp(16px,2.5vw,22px) "Cormorant Garamond",serif;margin-top:4px}.detail-sub{font:14px "Cormorant Garamond",serif}
+.count-title{font:italic 23px "Cormorant Garamond",serif;margin:17px 0 10px}.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.count-unit{width:75px;padding:9px 4px;background:linear-gradient(145deg,#8c4b12,#67300b);color:#fff3d2;border-radius:7px;box-shadow:0 4px 10px #75420b2b}.count-unit b{display:block;font-size:25px}.count-unit small{font-size:9px;letter-spacing:1.4px}
+.location-box{margin:20px auto 0;padding:16px;border:1px solid #d2a64b;border-radius:15px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;text-align:left;background:#fff4d8a6}
+.location-title{font:600 21px "Cormorant Garamond",serif}.location-text{font-size:13px;line-height:1.6;overflow-wrap:anywhere}.location-text a{color:#75400d;text-decoration:underline}.map-button{margin-top:10px;font-size:12px;padding:10px 18px}.map-icon{font-size:42px;text-align:center}
+.thanks{font:italic 22px/1.4 "Cormorant Garamond",serif;margin:20px auto 3px}.thanks strong{font-size:25px;color:#74320d}.footer-mark{font-size:28px;color:#a77520;margin-top:8px}
+@media(max-width:620px){main{width:96%;margin:9px auto 20px}.card{padding:7px}.inner{padding:24px 13px 22px}.corner{font-size:27px}.details{grid-template-columns:1fr;gap:12px;padding:14px 0}.detail+.detail{border-left:0;border-top:1px solid #d4ad5e;padding-top:12px}.detail-icon{font-size:24px}.location-box{grid-template-columns:1fr;text-align:center}.map-icon{display:none}.name-frame{padding:5px 17px}.name-frame:before,.name-frame:after{font-size:19px}.home-photo{max-height:300px}.count-unit{width:65px}.count-unit b{font-size:22px}}
+@media print{#opening,.countdown,.map-button{display:none!important}body{background:white}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<div id="opening">
+  <div class="open-card">
+    <div class="om">ॐ</div>
+    <div class="intro-small">With the blessings of Lord Ganesha</div>
+    <div class="script">Vanitha Sengottaiyan Illam</div>
+    <div class="intro-small">House Warming Ceremony</div>
+    <p style="margin:18px 0 24px">A new beginning, a home filled with love.</p>
+    <button onclick="openInvite()">✦ Tap to Open Invitation ✦</button>
+  </div>
+</div>
+
+<main>
+<section class="card"><div class="inner">
+<div class="corner tl">❧</div><div class="corner tr">❧</div><div class="corner bl">❧</div><div class="corner br">❧</div>
+<div class="top-lamps">🌿 🪔 🌿</div>
+<div class="blessing">With the blessings of Lord Ganesha<br>we cordially invite you to our</div>
+<div class="eyebrow">A joyful new beginning</div>
+<h1 class="main-title">Housewarming Ceremony</h1>
+<div class="sub-title">of our new home</div>
+<div class="ornament">❧ ❖ ❧</div>
+<div class="name-frame"><div class="house-name">Vanitha Sengottaiyan Illam</div></div>
+<div class="message">We are delighted to begin a new chapter in our lives and would be honoured by your presence and blessings on this special occasion.</div>
+
+<!-- Optional: put your own house photo in this folder as house.jpg and uncomment the image below. -->
+<!-- <img class="home-photo" src="house.jpg" alt="Vanitha Sengottaiyan Illam new home"> -->
+
+<div class="ornament">❧ ✦ ❧</div>
+<div class="details">
+  <div class="detail"><div class="detail-icon">🗓️</div><div class="detail-label">Date</div><div class="detail-value">25 October 2026</div><div class="detail-sub">Sunday</div></div>
+  <div class="detail"><div class="detail-icon">🕰️</div><div class="detail-label">Time</div><div class="detail-value">4:00 – 6:00 AM</div><div class="detail-sub">House Warming Ceremony</div></div>
+  <div class="detail"><div class="detail-icon">📍</div><div class="detail-label">Venue</div><div class="detail-value">T. Vellalapatty</div><div class="detail-sub">Thuraiyur Main Road</div></div>
+</div>
+
+<div class="count-title">Counting down to our special day</div>
+<div class="countdown" aria-label="Countdown">
+  <div class="count-unit"><b id="days">00</b><small>DAYS</small></div>
+  <div class="count-unit"><b id="hours">00</b><small>HOURS</small></div>
+  <div class="count-unit"><b id="minutes">00</b><small>MINUTES</small></div>
+  <div class="count-unit"><b id="seconds">00</b><small>SECONDS</small></div>
+</div>
+
+<div class="location-box">
+  <div>
+    <div class="location-title">📍 Google Maps Location</div>
+    <div class="location-text">T. Vellalapatty, Thuraiyur Main Road<br><a href="https://maps.app.goo.gl/NCftB7sE94zL8fvq6?g_st=aw" target="_blank" rel="noopener">Open the exact house location in Google Maps</a></div>
+    <a class="map-button" href="https://maps.app.goo.gl/NCftB7sE94zL8fvq6?g_st=aw" target="_blank" rel="noopener">📍 Navigate to Vanitha Sengottaiyan Illam</a>
+  </div>
+  <div class="map-icon">🗺️</div>
+</div>
+
+<div class="ornament">❧ ❀ ❧</div>
+<div class="thanks">Your presence will make our happiness complete!<br><strong>We warmly welcome you and your family.</strong></div>
+<div class="footer-mark">ॐ</div>
+</div></section>
+</main>
+<script>
+function openInvite(){document.getElementById('opening').classList.add('closed')}
+const eventDate = new Date('2026-10-25T04:00:00+05:30').getTime();
+function updateCountdown(){
+  const diff=Math.max(0,eventDate-Date.now());
+  document.getElementById('days').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+  document.getElementById('hours').textContent=String(Math.floor(diff/3600000)%24).padStart(2,'0');
+  document.getElementById('minutes').textContent=String(Math.floor(diff/60000)%60).padStart(2,'0');
+  document.getElementById('seconds').textContent=String(Math.floor(diff/1000)%60).padStart(2,'0');
+}
+updateCountdown();setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
